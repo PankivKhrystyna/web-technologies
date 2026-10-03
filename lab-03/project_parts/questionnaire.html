@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        body { display: flex; flex-direction: column; align-items: center; }
+        form { width: 500px; }
+        fieldset { margin-bottom: 15px; }
+        label { display: block; margin: 8px 0 3px; }
+        input[type="radio"] + label,
+        input[type="checkbox"] + label { display: inline; }
+        input[type="text"], input[type="password"], input[type="email"],
+        input[type="tel"], input[type="date"], textarea, select { width: 100%; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+<h1>Анкета</h1>
+
+<form action="questionnaire.html" method="get">
+
+    <fieldset>
+        <legend>Особисті дані</legend>
+
+        <label for="fname">Ім'я:</label>
+        <input type="text" id="fname" name="first_name" value="" placeholder="Введіть ім'я" required tabindex="1">
+
+        <label for="lname">Прізвище:</label>
+        <input type="text" id="lname" name="last_name" value="" placeholder="Введіть прізвище" required tabindex="2">
+
+        <label for="about">Про себе:</label>
+        <textarea id="about" name="about" rows="4" placeholder="Розкажіть кілька слів" tabindex="3"></textarea>
+
+        <label for="birth">Дата народження:</label>
+        <input type="date" id="birth" name="birth_date" value="" tabindex="4">
+    </fieldset>
+
+    <fieldset>
+        <legend>Контакти та пароль</legend>
+
+        <label for="pass">Пароль:</label>
+        <input type="password" id="pass" name="password" value="" placeholder="Рівно 6 символів"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}"
+               title="Рівно 6 символів: велика літера, мала літера і цифра"
+               required tabindex="5">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="" placeholder="name@example.com"
+               autocomplete="off"
+               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+               title="Введіть email у форматі name@example.com"
+               required tabindex="6">
+
+        <label for="tel">Мобільний телефон:</label>
+        <input type="tel" id="tel" name="phone" value="" placeholder="+380501234567"
+               pattern="\+380\d{9}"
+               title="Формат: +380 і ще 9 цифр"
+               tabindex="7">
+    </fieldset>
+
+    <fieldset>
+        <legend>Вибір варіантів</legend>
+
+        <p>Стать:</p>
+        <input type="radio" id="g1" name="gender" value="male" tabindex="8">
+        <label for="g1">Чоловік</label>
+        <input type="radio" id="g2" name="gender" value="female" tabindex="9">
+        <label for="g2">Жінка</label>
+        <input type="radio" id="g3" name="gender" value="none" tabindex="10">
+        <label for="g3">Не вказувати</label>
+
+        <p>Формат навчання:</p>
+        <input type="radio" id="f1" name="study_format" value="offline" tabindex="11">
+        <label for="f1">Очно</label>
+        <input type="radio" id="f2" name="study_format" value="online" tabindex="12">
+        <label for="f2">Дистанційно</label>
+        <input type="radio" id="f3" name="study_format" value="mixed" checked tabindex="13">
+        <label for="f3">Змішано</label>
+
+        <p>Інтереси:</p>
+        <input type="checkbox" id="i1" name="interests" value="coding" tabindex="14">
+        <label for="i1">Програмування</label>
+        <input type="checkbox" id="i2" name="interests" value="design" tabindex="15">
+        <label for="i2">Дизайн</label>
+        <input type="checkbox" id="i3" name="interests" value="music" tabindex="16">
+        <label for="i3">Музика</label>
+        <input type="checkbox" id="i4" name="interests" value="sport" tabindex="17">
+        <label for="i4">Спорт</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Випадні списки</legend>
+
+        <label for="lang">Улюблена мова розмітки/програмування:</label>
+        <select id="lang" name="language" tabindex="18">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js" selected>JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select>
+
+        <label for="subjects">Предмети, які подобаються (Ctrl + клік для кількох):</label>
+        <select id="subjects" name="subjects" multiple size="6" tabindex="19">
+            <option value="db">Бази даних</option>
+            <option value="web">Веб-технології</option>
+            <option value="os">Операційні системи</option>
+            <option value="net">Комп'ютерні мережі</option>
+            <option value="sw">Конструювання ПЗ</option>
+            <option value="pm">Управління ІТ проектами</option>
+        </select>
+
+        <label for="hobby">Хобі:</label>
+        <select id="hobby" name="hobby" tabindex="20">
+            <optgroup label="Спорт">
+                <option value="football">Футбол</option>
+                <option value="tennis">Теніс</option>
+                <option value="swim">Плавання</option>
+            </optgroup>
+            <optgroup label="Мистецтво">
+                <option value="drawing">Малювання</option>
+                <option value="music">Музика</option>
+                <option value="dance">Танці</option>
+            </optgroup>
+            <optgroup label="Технології">
+                <option value="coding">Програмування</option>
+                <option value="robots">Робототехніка</option>
+                <option value="games">Ігри</option>
+            </optgroup>
+            <optgroup label="Подорожі">
+                <option value="mountains">Гори</option>
+                <option value="sea">Море</option>
+                <option value="cities">Міста</option>
+            </optgroup>
+        </select>
+
+        <label for="browser">Улюблений браузер:</label>
+        <input type="text" id="browser" name="browser" value="" list="browsers"
+               placeholder="Почніть вводити назву" tabindex="21">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist>
+    </fieldset>
+
+    <fieldset>
+        <legend>Файли</legend>
+
+        <label for="audio">Аудіофайли (можна кілька):</label>
+        <input type="file" id="audio" name="audio_files" accept="audio/*" multiple tabindex="22">
+    </fieldset>
+
+    <button type="submit" name="send" value="submit" tabindex="23">Надіслати</button>
+    <button type="reset" name="clear" value="reset" tabindex="24">Очистити</button>
+
+</form>
+
+<p><a href="../index.html">Повернутись на головну</a></p>
+</body>
+</html>
