@@ -1,0 +1,68 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 18px;
+}
+
+#main-title {
+    color: red;
+    font-family: "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: none;
+}
+
+.subtitle {
+    color: darkgreen;
+    font-size: 26px;
+    font-style: italic;
+    text-align: center;
+}
+
+.ingredients {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+b {
+    font-weight: bold;
+    color: #5c3317;
+}
+
+small {
+    font-size: 14px;
+}
+
+u {
+    text-decoration: underline;
+}
+
+s {
+    text-decoration: line-through;
+    color: gray;
+}
+
+mark {
+    background-color: #ffff99;
+    color: #333333;
+}
+
+.separator {
+    width: 60%;
+    height: 4px;
+    background-color: green;
+    border: none;
+    margin: 25px auto;
+}
+
+.conclusion {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    color: darkblue;
+    line-height: 1.6;
+}

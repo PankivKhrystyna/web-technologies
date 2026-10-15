@@ -1,0 +1,27 @@
+a {
+    color: purple;
+}
+
+.list-heading {
+    color: green;
+}
+
+ul ul li {
+    list-style-type: none;
+}
+
+.last-ul {
+    list-style-type: square;
+}
+
+.second-ul {
+    list-style-image: url(../checkmark.png);
+}
+
+ul li ul li.last-ul a {
+    text-decoration: none;
+
+    .different-list li {
+        list-style-type: decimal;
+    }
+}
