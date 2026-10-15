@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #eef2f7;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #1f4e79;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    background-color: #e3f2fd;
+}
+
+legend {
+    font-weight: bold;
+    color: white;
+    background-color: #1f4e79;
+}
+
+label {
+    display: block;
+    font-style: italic;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+}
+
+button {
+    color: white;
+    background-color: #2e7d32;
+}

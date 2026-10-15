@@ -1,0 +1,74 @@
+
+body {
+    background-color: #1b2a41;
+    background-image: url('img/image_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+
+    /* Якщо вікно браузера вужче за 320px, контейнер не стискається
+       далі, бо min-width не дозволяє. Він залишається 320px завширшки
+       і виходить за межі вікна, тому з'являється горизонтальна прокрутка. */
+}
+
+.tag-div {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    background-color: #f1c40f;
+
+    /* width і height не діють, бо inline-елемент поводиться як текст:
+       його розмір визначається лише вмістом. Розмір можна задати
+       тільки для block або inline-block. */
+}
+
+.tag-span {
+    display: block;
+    width: 150px;
+    background-color: #3498db;
+}
+
+.repeat-box {
+    height: 200px;
+    background-image: url('img/iconn.png');
+}
+.repeat-x     { background-repeat: repeat-x; }
+.repeat-y     { background-repeat: repeat-y; }
+.repeat-space { background-repeat: space; }
+.repeat-round { background-repeat: round; }
+
+.caption {
+    font-weight: bold;
+}
+
+.size-box {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #000;
+    background-image: url('img/image_2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.size-contain { background-size: contain; }
+.size-cover   { background-size: cover; }
+
+
+
+.scroll-box {
+    max-height: 150px;
+    overflow: auto;
+    background-image: url('img/wallpaper.jpg');
+
+}
+.attach-scroll { background-attachment: scroll; }
+.attach-local  { background-attachment: local; }
+
