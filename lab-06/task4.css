@@ -1,0 +1,287 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #243247;
+    padding-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.material-symbols-outlined {
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: #26364a;
+    z-index: 1000;
+    box-shadow: 0 3px 10px #0002;
+}
+
+.top-menu {
+    height: 100%;
+}
+
+.top-menu > li {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+.top-menu > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 100%;
+    padding: 0 23px;
+    color: white;
+    transition: background 0.25s;
+}
+
+.top-menu > li > a:hover {
+    background: #405773;
+}
+
+.top-menu > li.active > a {
+    background: #26a269;
+}
+
+.top-menu > li.right-item {
+    float: right;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: white;
+    color: #26364a;
+    box-shadow: 0 6px 15px #0002;
+    z-index: 1001;
+}
+
+.top-menu li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    position: relative;
+}
+
+.dropdown a {
+    display: block;
+    padding: 13px 16px;
+    transition: background 0.2s;
+}
+
+.dropdown a:hover {
+    background: #dcefe5;
+    color: #167447;
+}
+
+.dropdown .dropdown {
+    top: 0;
+    left: 100%;
+}
+
+.has-submenu > a::after {
+    content: "›";
+    float: right;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 65px;
+    z-index: 900;
+    background: #ffffff;
+    border-bottom: 2px solid #26a269;
+    box-shadow: 0 2px 7px #0001;
+}
+
+.sticky-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sticky-menu > li {
+    position: relative;
+}
+
+.sticky-menu > li > a {
+    display: block;
+    padding: 15px 22px;
+    color: #26364a;
+    font-weight: bold;
+}
+
+.sticky-menu > li:hover > a,
+.sticky-menu > li.current > a {
+    background: #26a269;
+    color: white;
+}
+
+.sticky-menu .dropdown {
+    top: 100%;
+}
+
+
+.side-nav {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    width: 245px;
+    background: #1769aa;
+    overflow-y: auto;
+    z-index: 800;
+    box-shadow: 3px 0 10px #0001;
+}
+
+.side-menu > li {
+    position: relative;
+}
+
+.side-menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    color: white;
+    border-bottom: 1px solid #ffffff30;
+    transition: background 0.2s;
+}
+
+.side-menu > li > a:hover {
+    background: #0d4f83;
+}
+
+.side-menu > li.active > a {
+    background: #26a269;
+    border-left: 5px solid #b9f3ce;
+    padding-left: 15px;
+}
+
+.side-menu .material-symbols-outlined {
+    font-size: 23px;
+}
+
+.side-menu .dropdown {
+    position: static;
+    display: none;
+    min-width: 0;
+    background: #12548b;
+    box-shadow: none;
+}
+
+.side-menu li:hover > .dropdown {
+    display: block;
+}
+
+.side-menu .dropdown a {
+    padding: 13px 18px 13px 55px;
+    color: white;
+    border-bottom: 1px solid #ffffff15;
+}
+
+.side-menu .dropdown a:hover {
+    background: #0a426e;
+    color: #b9f3ce;
+}
+
+.side-menu .dropdown .dropdown {
+    background: #0c426d;
+}
+
+.side-menu .dropdown .dropdown a {
+    padding-left: 75px;
+}
+
+.side-menu .has-submenu > a::after {
+    content: "▸";
+    margin-left: auto;
+}
+
+
+main {
+    margin-left: 265px;
+    padding: 30px;
+}
+
+.hero {
+    padding: 35px;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(135deg, #1769aa, #26a269);
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+.content-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000a;
+    scroll-margin-top: 130px;
+}
+
+.content-section h2 {
+    margin-bottom: 15px;
+    color: #1769aa;
+}
+
+.content-section p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.demo-list {
+    padding-left: 25px;
+    list-style: disc;
+    line-height: 2;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 25px;
+    text-align: center;
+    background: #26364a;
+    color: white;
+    border-radius: 10px;
+}

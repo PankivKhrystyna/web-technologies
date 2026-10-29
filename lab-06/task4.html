@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4</title>
+  <link rel="stylesheet" href="task4.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="top-nav" aria-label="Горизонтальна навігація">
+  <ul class="top-menu">
+
+    <li class="active">
+      <a href="#home" aria-current="page">
+        <span class="material-symbols-outlined">home</span>
+        <span class="label">Головна</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#about">
+        <span class="material-symbols-outlined">info</span>
+        <span class="label">Про нас</span>
+      </a>
+      <ul class="dropdown">
+        <li><a href="#about">Історія</a></li>
+        <li class="has-submenu">
+          <a href="#team">Наша команда</a>
+          <ul class="dropdown">
+            <li><a href="#team">Розробники</a></li>
+            <li><a href="#team">Дизайнери</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#services">
+        <span class="material-symbols-outlined">apps</span>
+        <span class="label">Послуги</span>
+      </a>
+      <ul class="dropdown">
+        <li><a href="#services">Веброзробка</a></li>
+        <li class="has-submenu">
+          <a href="#services">Дизайн</a>
+          <ul class="dropdown">
+            <li><a href="#services">UI-дизайн</a></li>
+            <li><a href="#services">UX-дизайн</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#contacts">
+        <span class="material-symbols-outlined">mail</span>
+        <span class="label">Контакти</span>
+      </a>
+    </li>
+
+    <li class="right-item">
+      <a href="#profile">
+        <span class="material-symbols-outlined">account_circle</span>
+        <span class="label">Профіль</span>
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+<nav class="side-nav" aria-label="Вертикальна навігація">
+  <ul class="side-menu">
+
+    <li class="active">
+      <a href="#home" aria-current="page">
+        <span class="material-symbols-outlined">home</span>
+        <span>Головна</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#about">
+        <span class="material-symbols-outlined">info</span>
+        <span>Про нас</span>
+      </a>
+    </li>
+
+    <li class="has-submenu">
+      <a href="#services">
+        <span class="material-symbols-outlined">work</span>
+        <span>Послуги</span>
+      </a>
+      <ul class="dropdown">
+        <li><a href="#services">Веброзробка</a></li>
+
+        <li class="has-submenu">
+          <a href="#services">Дизайн</a>
+          <ul class="dropdown">
+            <li><a href="#services">UI-дизайн</a></li>
+            <li><a href="#services">UX-дизайн</a></li>
+            <li><a href="#services">Графічний дизайн</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#services">SEO</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#team">
+        <span class="material-symbols-outlined">groups</span>
+        <span>Команда</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#contacts">
+        <span class="material-symbols-outlined">mail</span>
+        <span>Контакти</span>
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+<main>
+  <section class="hero" id="home">
+    <h1>Навігаційні панелі</h1>
+    <p>
+      Приклад реалізації горизонтального та вертикального меню
+      з використанням HTML, CSS, позиціонування та Google Fonts Icons.
+    </p>
+  </section>
+
+  <nav class="sticky-nav" aria-label="Липка навігація">
+    <ul class="sticky-menu">
+      <li class="current"><a href="#home">Головна</a></li>
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#team">Команда</a></li>
+      <li><a href="#contacts">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <section class="content-section" id="about">
+    <h2>Про нас</h2>
+    <p>
+      Цей розділ демонструє роботу посилань і позиціонування
+      навігаційних елементів.
+    </p>
+    <p>
+      Горизонтальне меню закріплене у верхній частині екрана
+      за допомогою <code>position: fixed</code>.
+    </p>
+  </section>
+
+  <section class="content-section" id="services">
+    <h2>Наші послуги</h2>
+    <ul class="demo-list">
+      <li>Веброзробка</li>
+      <li>UI/UX-дизайн</li>
+      <li>Графічний дизайн</li>
+      <li>SEO-оптимізація</li>
+    </ul>
+  </section>
+
+  <section class="content-section" id="team">
+    <h2>Наша команда</h2>
+    <p>Розробники, дизайнери та фахівці з вебтехнологій.</p>
+  </section>
+
+  <section class="content-section" id="profile">
+    <h2>Профіль користувача</h2>
+    <p>Приклад пункту меню, розташованого праворуч.</p>
+  </section>
+
+  <section class="content-section" id="contacts">
+    <h2>Контакти</h2>
+    <p>Email: example@example.com</p>
+    <p>Телефон: +380 00 000 00 00</p>
+  </section>
+
+  <footer>
+    <p>Завдання 4 — HTML та CSS</p>
+  </footer>
+</main>
+
+</body>
+</html>
