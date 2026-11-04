@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+:root {
+    --font-main: "Roboto", Arial, sans-serif;
+
+    --color-bg: #fff;
+    --color-text: #444;
+    --color-text-strong: #333;
+    --color-text-muted: #888;
+    --color-border: #ccc;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-city: 40px;
+    --fs-temp: 52px;
+    --fs-base: 16px;
+    --fs-small: 15px;
+
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 20px;
+
+    --weather-width: 400px;
+    --day-height: 70px;
+    --icon-size: 45px;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--fs-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+.weather {
+    max-width: var(--weather-width);
+    margin: 0 auto;
+}
+
+
+.current {
+    padding: var(--space-m) var(--space-m) var(--space-l);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.current__city {
+    font-size: var(--fs-city);
+    font-weight: var(--fw-regular);
+    line-height: 1.2;
+}
+
+.current__date,
+.current__state {
+    color: var(--color-text-muted);
+}
+
+.current__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: var(--space-s);
+}
+
+.current__now {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.current__icon {
+    width: 60px;
+}
+
+.current__temp {
+    font-size: var(--fs-temp);
+    font-weight: var(--fw-light);
+}
+
+.current__unit {
+    align-self: flex-start;
+    margin-top: var(--space-s);
+    color: var(--color-text-muted);
+}
+
+.details {
+    font-size: var(--fs-small);
+}
+
+.details__label {
+    color: var(--color-text-muted);
+}
+
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    height: var(--day-height);
+    padding: 0 var(--space-m);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.day__name {
+    flex: 2;
+    font-weight: var(--fw-bold);
+}
+
+.day__icon {
+    flex: 0 0 var(--icon-size);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.day__temps {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day__max {
+    color: var(--color-text-strong);
+}
+
+.day__min {
+    color: var(--color-text-muted);
+}
+
+.day__pollen {
+    flex: 2;
+    text-align: right;
+    color: var(--color-text-muted);
+}
+
+.day__pollen-value {
+    color: var(--color-text);
+}
